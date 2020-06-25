@@ -13,4 +13,9 @@ feature 'Enter names' do
     sign_in_and_play
     expect(page).to have_content 'James: HP100'
   end
+  scenario 'clicks button to attack player 2' do
+    sign_in_and_play
+    click_button('attack')
+    expect(page).to have_content 'You attacked Player 2'
+  end
 end
