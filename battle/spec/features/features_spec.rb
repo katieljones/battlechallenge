@@ -6,17 +6,11 @@
 # end
 feature 'Enter names' do
   scenario 'players enter name and it returns input on the screen' do
-    visit('/')
-    fill_in :player_1_name, with: 'Katie'
-    fill_in :player_2_name, with: 'James'
-    click_button 'Submit'
+    sign_in_and_play
     expect(page).to have_content 'Katie vs. James'
   end
   scenario 'can see player 2 hp' do
-    visit('/')
-    fill_in :player_1_name, with: 'Katie'
-    fill_in :player_2_name, with: 'James'
-    click_button 'Submit'
+    sign_in_and_play
     expect(page).to have_content 'James: HP100'
   end
 end
