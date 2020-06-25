@@ -12,4 +12,11 @@ feature 'Enter names' do
     click_button 'Submit'
     expect(page).to have_content 'Katie vs. James'
   end
+  scenario 'can see player 2 hp' do
+    visit('/')
+    fill_in :player_1_name, with: 'Katie'
+    fill_in :player_2_name, with: 'James'
+    click_button 'Submit'
+    expect(page).to have_content 'James: HP100'
+  end
 end
