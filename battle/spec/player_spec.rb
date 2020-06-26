@@ -12,7 +12,7 @@ describe Player do
   describe '#attack' do
     it 'reduces hp points by 10' do
     player = Player.new("name")
-    expect{ player.attack }.to change { player.hp }.by -10
+    expect{ player.attacked }.to change { player.hp }.by -10
     end
   end
 end
