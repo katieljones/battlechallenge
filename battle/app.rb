@@ -23,7 +23,11 @@ class Battle < Sinatra::Base
     redirect '/attack'
   end
   get '/attack' do
+<<<<<<< HEAD
     Game.new.attack($player_2)
+=======
+    @player_2_name = $player_2.name
+>>>>>>> 9b7851b7f967c028178adb053ff5f57f1b3bb3d8
     erb :attack
   end
 end
